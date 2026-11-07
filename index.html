@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsip Laporan Praktikum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function bukaPraktikum(id) {
+            document.getElementById('menu-utama').classList.add('hidden');
+            document.getElementById('detail-' + id).classList.remove('hidden');
+        }
+
+        function kembaliKeMenu(id) {
+            document.getElementById('detail-' + id).classList.add('hidden');
+            document.getElementById('menu-utama').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-950 font-sans text-gray-300 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-gray-900 border-b border-emerald-900 py-8 shadow-lg">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-2xl sm:text-3xl font-bold mb-2 text-emerald-400">Repositori Laporan Praktikum Khadafi</h1>
+            <p class="text-gray-400 text-sm sm:text-base">Pilih laporan praktikum untuk melihat dan mengunduh laporan.</p>
+        </div>
+    </header>
+
+    <!-- Kontainer Utama -->
+    <main class="max-w-4xl mx-auto px-6 py-10 flex-grow w-full">
+        
+        <!-- MENU UTAMA -->
+        <div id="menu-utama" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Card Menu 1: Struktur Data -->
+            <div class="bg-gray-800 rounded-xl shadow-md border border-gray-700 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-emerald-900/20 transition-all">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-100 mb-1">Struktur Data</h2>
+                    <p class="text-gray-400 text-sm mb-4">Materi implementasi C++, singly, doubly, hingga circular linked list.</p>
+                </div>
+                <button onclick="bukaPraktikum(1)" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-sm">
+                    Pilih
+                </button>
+            </div>
+
+            <!-- Card Menu 2: KDJK -->
+            <div class="bg-gray-800 rounded-xl shadow-md border border-gray-700 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-emerald-900/20 transition-all">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-100 mb-1">KDJK</h2>
+                    <p class="text-gray-400 text-sm mb-4">Komunikasi Data dan Jaringan Komputer, termasuk topologi jaringan.</p>
+                </div>
+                <button onclick="bukaPraktikum(2)" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-sm">
+                    Pilih
+                </button>
+            </div>
+
+            <!-- Card Menu 3: Basis Data -->
+            <div class="bg-gray-800 rounded-xl shadow-md border border-gray-700 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-emerald-900/20 transition-all">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-100 mb-1">Basis Data</h2>
+                    <p class="text-gray-400 text-sm mb-4">Perancangan skema relasional tabel dan eksekusi query SQL.</p>
+                </div>
+                <button onclick="bukaPraktikum(3)" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-sm">
+                    Pilih
+                </button>
+            </div>
+
+            <!-- Card Menu 4: Statistika -->
+            <div class="bg-gray-800 rounded-xl shadow-md border border-gray-700 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-emerald-900/20 transition-all">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-100 mb-1">Statistika</h2>
+                    <p class="text-gray-400 text-sm mb-4">Tabel distribusi frekuensi, aturan Sturges, dan pengolahan dataset.</p>
+                </div>
+                <button onclick="bukaPraktikum(4)" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-sm">
+                    Pilih
+                </button>
+            </div>
+        </div>
+
+        <!-- DETAIL PRAKTIKUM -->
+        
+        <!-- Detail Praktikum 1: Struktur Data (6 Laporan) -->
+        <div id="detail-1" class="hidden animate-fade-in">
+            <button onclick="kembaliKeMenu(1)" class="text-emerald-500 hover:text-emerald-400 mb-6 flex items-center text-sm font-medium transition-colors">
+                &larr; Kembali ke Daftar Praktikum
+            </button>
+            <div class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-100 mb-2">Laporan Praktikum: Struktur Data</h2>
+                <p class="text-gray-400 mb-6 pb-6 border-b border-gray-700">Silakan pilih laporan yang ingin diunduh:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="https://docs.google.com/document/d/1bRzPjwFq9RuHR6Ytcf106Oez9Okg4Cnb/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 1</a>
+                    <a href="https://docs.google.com/document/d/1PFyNlW0HyEDi_Co_YSJsQykOiEILyzc2/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 2</a>
+                    <a href="https://docs.google.com/document/d/1WjPcbIo8IKc7424b5Oo4RwBr5wonVFHF/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 3</a>
+                    <a href="https://docs.google.com/document/d/1arzinbNrItrgtH3t_MXRcU9SD2SA2krW/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 4</a>
+                    <a href="https://docs.google.com/document/d/11ETymcVdeR1RwJhUXt24jeEh2U1nLlzK/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 5</a>
+                    <a href="https://docs.google.com/document/d/1ln_Kq-LN5k5C1YTuoHQNFcRO2YXy0Ihx/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 6</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Praktikum 2: KDJK (7 Laporan) -->
+        <div id="detail-2" class="hidden animate-fade-in">
+            <button onclick="kembaliKeMenu(2)" class="text-emerald-500 hover:text-emerald-400 mb-6 flex items-center text-sm font-medium transition-colors">
+                &larr; Kembali ke Daftar Praktikum
+            </button>
+            <div class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-100 mb-2">Laporan Praktikum: KDJK</h2>
+                <p class="text-gray-400 mb-6 pb-6 border-b border-gray-700">Silakan pilih laporan yang ingin diunduh:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="https://docs.google.com/document/d/1xvHHlB9QOkzs5HU7gi8GT7Nb1IoIuxLd/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 1</a>
+                    <a href="https://docs.google.com/document/d/1aOvmsZ8HuuhpI0vCUAiTmlil6E9PkFe0/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 2</a>
+                    <a href="https://docs.google.com/document/d/13ApO0LpVgYRrQ9JPvVljoKx121ZZcJ0z/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 3</a>
+                    <a href="https://docs.google.com/document/d/17ek4CWAcScfULKt3QAhmNRHAcgX-CoIw/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 4</a>
+                    <a href="https://docs.google.com/document/d/1zCdeQTmMyn4ATyAKr2D3tjWevsy_8Xgp/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 5</a>
+                    <a href="https://docs.google.com/document/d/1dBPnWghkaaabxJ-Tn4NtZVhXu3KtayZ9/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 6</a>
+                    <a href="https://docs.google.com/document/d/1qkgp5fjDy_-yu4Op8WVyfkZ4NpiPQkIy/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 7</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Praktikum 3: Basis Data (6 Laporan) -->
+        <div id="detail-3" class="hidden animate-fade-in">
+            <button onclick="kembaliKeMenu(3)" class="text-emerald-500 hover:text-emerald-400 mb-6 flex items-center text-sm font-medium transition-colors">
+                &larr; Kembali ke Daftar Praktikum
+            </button>
+            <div class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-100 mb-2">Laporan Praktikum: Basis Data</h2>
+                <p class="text-gray-400 mb-6 pb-6 border-b border-gray-700">Silakan pilih laporan yang ingin diunduh:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="https://docs.google.com/document/d/19j8T37L130RJVnDUXCDf2mhK7ROkgNxu/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 1</a>
+                    <a href="https://docs.google.com/document/d/1zLaCvpHk0fqEP6m6pOTlMbDEWfw2Y7m8/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 2</a>
+                    <a href="https://docs.google.com/document/d/181sUAyPOsvDMHkiS8oqvlsrqcqpLpGqH/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 3</a>
+                    <a href="https://docs.google.com/document/d/1jPPeBDBWVuMzoyJwcNsXDyepdpFDrtSg/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 4</a>
+                    <a href="https://docs.google.com/document/d/1ubWflvN7wCTPGHdIdCMyYM1kuAzgaTgL/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 5</a>
+                    <a href="https://docs.google.com/document/d/14oDpvH7U8d-XygjnJOdsc-ej6ywpuMHi/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 6</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Praktikum 4: Statistika (5 Laporan) -->
+        <div id="detail-4" class="hidden animate-fade-in">
+            <button onclick="kembaliKeMenu(4)" class="text-emerald-500 hover:text-emerald-400 mb-6 flex items-center text-sm font-medium transition-colors">
+                &larr; Kembali ke Daftar Praktikum
+            </button>
+            <div class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-8">
+                <h2 class="text-2xl font-bold text-gray-100 mb-2">Laporan Praktikum: Statistika</h2>
+                <p class="text-gray-400 mb-6 pb-6 border-b border-gray-700">Silakan pilih laporan yang ingin diunduh:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="https://drive.google.com/file/d/1u4q_rapz6x5ZmUxrhvzxFoLNpbubkDJh/view?usp=sharing" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 1</a>
+                    <a href="https://docs.google.com/document/d/12KcrVeZzoOH4D6zy6Bnzl0J2kGaZAIB-/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 2</a>
+                    <a href="https://docs.google.com/document/d/1R8kN_oq6soAkj3-kblVnkrBru7zziKMj/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 3</a>
+                    <a href="https://docs.google.com/document/d/1B-XCNzYKtXMuANw7YcQuh6SuCYE0lFIK/edit?usp=sharing&ouid=103742009125375413104&rtpof=true&sd=true" target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 4</a>
+                    <a target="_blank" class="text-center bg-gray-900 border border-emerald-700 hover:bg-emerald-600 hover:text-white text-emerald-400 font-medium py-3 px-4 rounded-lg transition-colors">Laporan 5 (belum tersedia)</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-emerald-900 text-center py-6 text-gray-500 text-sm mt-auto">
+        <p>&copy; 2026 SIDAPI</p>
+    </footer>
+
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>
